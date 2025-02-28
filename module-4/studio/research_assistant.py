@@ -29,6 +29,7 @@ llm = (
                 "Authorization": f"Bearer {os.environ['SPARE_PARTS_OLLAMA_API_KEY']}"
             }
         },
+        temperature=0,
     )
     if os.environ["USE_SPARE_PARTS"]
     else ChatOpenAI(model="gpt-4o", temperature=0)
