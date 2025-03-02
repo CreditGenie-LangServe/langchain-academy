@@ -51,7 +51,7 @@ llm = (
             }
         },
     )
-    if os.environ["USE_SPARE_PARTS"]
+    if os.environ["USE_SPARE_PARTS"] == "true"
     else ChatOpenAI(model="gpt-4o")
 )
 llm_with_tools = llm.bind_tools(tools)
