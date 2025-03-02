@@ -50,9 +50,10 @@ llm = (
                 "Authorization": f"Bearer {os.environ['SPARE_PARTS_OLLAMA_API_KEY']}"
             }
         },
+        temperature=0,
     )
     if os.environ["USE_SPARE_PARTS"] == "true"
-    else ChatOpenAI(model="gpt-4o")
+    else ChatOpenAI(model="gpt-4o-mini", temperature=0)
 )
 llm_with_tools = llm.bind_tools(tools)
 

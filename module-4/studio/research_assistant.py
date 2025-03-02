@@ -32,7 +32,7 @@ llm = (
         temperature=0,
     )
     if os.environ["USE_SPARE_PARTS"] == "true"
-    else ChatOpenAI(model="gpt-4o", temperature=0)
+    else ChatOpenAI(model="gpt-4o-mini", temperature=0)
 )
 
 ### Schema
