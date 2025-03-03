@@ -26,7 +26,8 @@ llm = (
         base_url=os.environ["SPARE_PARTS_OLLAMA_API_URL"],
         client_kwargs={
             "headers": {
-                "Authorization": f"Bearer {os.environ['SPARE_PARTS_OLLAMA_API_KEY']}"
+                "Authorization": f"Bearer {os.environ['SPARE_PARTS_OLLAMA_API_KEY']}",
+                "Content-Type": "application/json",
             }
         },
         temperature=0,
